@@ -1,7 +1,6 @@
-#include <windows.h>
-#include <objbase.h>
 #include <initguid.h>
 
+#include "stubs.h"
 #include "ioctl.h"
 #include "ifc_ldev.h"
 
