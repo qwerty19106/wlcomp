@@ -9,16 +9,7 @@
 
 #include "wlcomp.h"
 
-
-// У всех функций за исключением некоторых возвращается указатель на интерфейс типом ULONG
-// Последним параметром идет код ошибки или данные...так что переменную давать обязательно иначе интерфейс занулиться...
-
-// хранилище для процедуры получения интерфейса
-
-// возвращает ошибку типом ULONG, а указатель передается PULONG первым параметром.... так проще
-
-LUnknown* CreateInstance(ULONG Slot);
-
+extern "C" LUnknown* CreateInstance(ULONG Slot);
 
 LDevice* CreateLDevice(unsigned int Slot, unsigned int* err)
 {
