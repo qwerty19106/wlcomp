@@ -25,7 +25,7 @@ LDevice* CreateLDevice(unsigned int Slot, unsigned int* err)
     LUnknown* pIUnknown = CreateInstance(Slot);// pointer to interface
     if(!pIUnknown) {
         //CallCreateInstance failed
-        *err = errno;
+        *err = GetLastError();
         return 0;
     }
     IDaqLDevice* pI;
